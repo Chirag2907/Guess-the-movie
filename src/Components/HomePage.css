@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap");
+
+.fancyFont {
+  font-family: "Playfair Display", serif;
+  mix-blend-mode: difference;
+  text-shadow: 0 8px 32px #1f2933;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.flex {
+  display: flex;
+  color: white;
+}
+
+img {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 30rem;
+  height: 20rem;
+  transform: rotateX(30degree);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  top: 2rem;
+}
+
+.bigText{
+  font-size: 2rem;
+}
+
+.headingAnimation {
+  font-size: 5rem;
+  font-weight: bold;
+  top: 3rem;
+  position: relative;
+  animation: movingText 5s cubic-bezier(0.34, 0.04, 0.18, 0.7);
+}
+
+@keyframes movingText {
+  0% {
+    transform: translateY(13rem);
+    font-size: 8rem;
+  }
+  60% {
+    transform: translateY(14rem);
+    font-size: 8rem;
+  }
+  100% {
+    transform: translateY(0rem);
+    font-size: 5rem;
+  }
+}
+
+.options {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+  height: 50%;
+  position: fixed;
+  top: 15rem;
+}
+
+.card {
+  display: flex;
+  width: 35vw;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px 0 #1f2933;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  cursor: pointer;
+}
+
+.close{
+  position: fixed;
+  right: 3rem;
+  top: 3rem;
+  cursor: pointer;
+  -webkit-backdrop-filter: blur(0px) !important;
+}
+
+.newcard{
+  display: flex;
+  width: 45vw;
+  height: 100%;
+  font: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+}
+
+.card:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 8px 40px 0 #12181e;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+.option {
+  justify-content: center;
+  align-items: center;
+}
+
+.inst{
+  color: white;
+  top:0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.animate{
+  animation: fade-out 1s ease-in-out;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

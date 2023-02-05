@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Guess-the-movie/static/css/main.b82fef3d.css",
+    "main.js": "/Guess-the-movie/static/js/main.631fcf82.js",
+    "static/js/787.66eec1de.chunk.js": "/Guess-the-movie/static/js/787.66eec1de.chunk.js",
+    "index.html": "/Guess-the-movie/index.html",
+    "main.b82fef3d.css.map": "/Guess-the-movie/static/css/main.b82fef3d.css.map",
+    "main.631fcf82.js.map": "/Guess-the-movie/static/js/main.631fcf82.js.map",
+    "787.66eec1de.chunk.js.map": "/Guess-the-movie/static/js/787.66eec1de.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b82fef3d.css",
+    "static/js/main.631fcf82.js"
+  ]
+}

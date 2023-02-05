@@ -46,7 +46,7 @@ const ZoomExample = () => {
 	  <div id="instructions" className="inst options newcard  bigText">
 	   <div className="close" onClick={handleGame}>❌</div>
 		<br/>
-		<GetMovie />
+		<GetMovie func={handleGame} />
 
 	  </div>
 	</Bounce>
@@ -62,6 +62,7 @@ const ZoomExample = () => {
 		 Computer will choose a random movie and display all the vowels, <br/>
             numbers and special characters present in it..<br/><br/>
             You have to guess the movie letter by letter...<br/><br/>
+			You will be given 5 minutes to guess as many movies as you can.<br/><br/>
             eg. if you enter 'n' then the computer will show you all the<br/>
             places where n is present.<br/><br/>
             You will get 1 point for each correct guess.<br/><br/>

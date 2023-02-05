@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
 .input{
+    font-family: 'Montserrat', sans-serif;
     width:65%;
     height: 3rem;
     padding: 5px 5px;
@@ -8,5 +11,52 @@
     border-radius: 4px;
     box-sizing: border-box;
     size: 5rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
+
+}
+
+.timeup{
+    /* make a timeup card */
+    position: fixed;
+    top:7rem;
+    left: 50vh;
+    font-family: 'Montserrat', sans-serif;
+    width: 50%;
+    height: 30rem;
+    padding: 4rem;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    size: 5rem;
+    font-size: 1.5rem;
+    background-color: black;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 7rem;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: 1fr ;
+    position: absolute;
+    bottom: 3rem;
+}
+
+/* mobile view */
+@media screen and (max-width: 600px) {
+    .timeup{
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        top: 0;
+        left: 0;
+        border-radius: 0;
+    }
+    .buttons{
+        position: relative;
+        bottom: 0;
+    }
 }

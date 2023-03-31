@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/chirag2907.github.io/Guess-the-movie/static/css/main.6612e024.css",
-    "main.js": "/chirag2907.github.io/Guess-the-movie/static/js/main.3945c8f2.js",
-    "static/js/787.66eec1de.chunk.js": "/chirag2907.github.io/Guess-the-movie/static/js/787.66eec1de.chunk.js",
-    "index.html": "/chirag2907.github.io/Guess-the-movie/index.html",
-    "main.6612e024.css.map": "/chirag2907.github.io/Guess-the-movie/static/css/main.6612e024.css.map",
-    "main.3945c8f2.js.map": "/chirag2907.github.io/Guess-the-movie/static/js/main.3945c8f2.js.map",
-    "787.66eec1de.chunk.js.map": "/chirag2907.github.io/Guess-the-movie/static/js/787.66eec1de.chunk.js.map"
+    "main.css": "/Guess-the-movie/static/css/main.6612e024.css",
+    "main.js": "/Guess-the-movie/static/js/main.cd024820.js",
+    "static/js/787.7efd31bd.chunk.js": "/Guess-the-movie/static/js/787.7efd31bd.chunk.js",
+    "index.html": "/Guess-the-movie/index.html",
+    "main.6612e024.css.map": "/Guess-the-movie/static/css/main.6612e024.css.map",
+    "main.cd024820.js.map": "/Guess-the-movie/static/js/main.cd024820.js.map",
+    "787.7efd31bd.chunk.js.map": "/Guess-the-movie/static/js/787.7efd31bd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6612e024.css",
-    "static/js/main.3945c8f2.js"
+    "static/js/main.cd024820.js"
   ]
 }

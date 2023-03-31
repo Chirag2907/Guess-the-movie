@@ -139,24 +139,26 @@ const GetMovie = (props) => {
       <div className="movieBackground"></div>
       <p className="movie"></p>
 
-      <div className="details">   
+      <div className="details">
         <p className="win"></p>
         <p className="attempts"></p>
       </div>
 
+      <div className="score-input">
+        <input
+          maxLength={1}
+          placeholder="Enter guess here"
+          className="input"
+          type="text"
+          onKeyDown={checker}
+        />
         <div className="scoreBackground"></div>
         <div className="scores">
           <div className="score">Current Score: {Score}</div>
           <div>High Score: {}</div>
         </div>
+      </div>
 
-      <input
-        maxLength={1}
-        placeholder="Enter guess here"
-        className="input"
-        type="text"
-        onKeyDown={checker}
-      />
       <br />
       <br />
       <br />

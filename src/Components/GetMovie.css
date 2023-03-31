@@ -127,7 +127,21 @@
     bottom: 3rem;
 }
 
+.score-input{
+    display: block;
+}
+
 @media screen and (max-width: 1000px){
+
+    .score-input{
+        position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20rem;
+    height: 40rem;
+    z-index: -1;
+    }
 
     .logo{
         font-size: 1.6rem;
@@ -165,16 +179,13 @@
         left: 50%;
         transform: translateX(-50%);
     }
-    .score{
-        padding-bottom:1rem;
-    }
     .scores{
         width: 100%;
         padding: 0.5rem;
         font-size: 1rem;
         position: absolute;
         top: 33rem;
-        transform: translateX(70%);
+        transform: translateX(65%);
         color: white;
     }
     .time{
@@ -185,7 +196,7 @@
     }
     .input{
         position: absolute;
-        bottom: 23rem;
+        bottom: 30%;
         left: 50%;
         transform: translateX(-50%);
         font-size: 1.3rem;

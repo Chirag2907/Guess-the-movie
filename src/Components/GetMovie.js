@@ -115,7 +115,7 @@ const GetMovie = (props) => {
   };
 
   return (
-    <div>
+    <div className="grey">
       {Show ? (
         <div className="timeup">
           Time Up!
@@ -125,14 +125,31 @@ const GetMovie = (props) => {
           Final Score: {Score}
           <br />
           <div className="buttons">
-            <span><button onClick={props.func}>Exit to main menu</button></span>
+            <span>
+              <button onClick={props.func}>Exit to main menu</button>
+            </span>
           </div>
         </div>
       ) : null}
-      <Timer func={pull_time}/>
+
+      <div className="logo">Guess the Movie!</div>
+
+      <Timer func={pull_time} />
+
+      <div className="movieBackground"></div>
       <p className="movie"></p>
-      <p className="win"></p>
-      <p className="attempts"></p>
+
+      <div className="details">   
+        <p className="win"></p>
+        <p className="attempts"></p>
+      </div>
+
+        <div className="scoreBackground"></div>
+        <div className="scores">
+          <div className="score">Current Score: {Score}</div>
+          <div>High Score: {}</div>
+        </div>
+
       <input
         maxLength={1}
         placeholder="Enter guess here"
@@ -142,7 +159,6 @@ const GetMovie = (props) => {
       />
       <br />
       <br />
-      <div>Score: {Score}</div>
       <br />
     </div>
   );

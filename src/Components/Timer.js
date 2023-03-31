@@ -23,7 +23,7 @@ const Timer = (props) => {
 
   return (
     <div>
-        <div>Time left: {Time}</div>
+        <div className='time'>Time left: {Time} {Time===1? <>second</>:<>seconds</>}</div>
     </div>
   )
 }

@@ -75,7 +75,6 @@ img {
 }
 
 .card {
-  
   display: flex;
   width: 35vw;
   height: 100%;
@@ -83,8 +82,6 @@ img {
   box-shadow: 0 8px 32px 0 #1f2933;
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(10px);
-  /* border-radius: 20px; */
-  /* border: 1px solid rgba(255, 255, 255, 0.18); */
   cursor: pointer;
 }
 
@@ -144,6 +141,20 @@ img {
 
 /* mobile view */
 @media only screen and (max-width: 600px) {
+  @keyframes movingText {
+    0% {
+      transform: translateY(13rem);
+      /* font-size: 3rem; */
+    }
+    60% {
+      transform: translateY(14rem);
+      /* font-size: 3rem; */
+    }
+    100% {
+      transform: translateY(0rem);
+      /* font-size: 3rem; */
+    }
+  }
   .card {
     width: 80vw;
   }

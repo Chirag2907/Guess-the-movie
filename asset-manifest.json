@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/Guess-the-movie/static/css/main.fb10dc70.css",
+    "main.css": "/Guess-the-movie/static/css/main.67b1f05b.css",
     "main.js": "/Guess-the-movie/static/js/main.17296cfd.js",
     "static/js/787.66eec1de.chunk.js": "/Guess-the-movie/static/js/787.66eec1de.chunk.js",
+    "static/media/background.jpg": "/Guess-the-movie/static/media/background.2b6f6803f7433669c252.jpg",
     "index.html": "/Guess-the-movie/index.html",
-    "main.fb10dc70.css.map": "/Guess-the-movie/static/css/main.fb10dc70.css.map",
+    "main.67b1f05b.css.map": "/Guess-the-movie/static/css/main.67b1f05b.css.map",
     "main.17296cfd.js.map": "/Guess-the-movie/static/js/main.17296cfd.js.map",
     "787.66eec1de.chunk.js.map": "/Guess-the-movie/static/js/787.66eec1de.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fb10dc70.css",
+    "static/css/main.67b1f05b.css",
     "static/js/main.17296cfd.js"
   ]
 }

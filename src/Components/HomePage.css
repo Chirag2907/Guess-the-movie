@@ -140,7 +140,7 @@ img {
 }
 
 /* mobile view */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   @keyframes movingText {
     0% {
       transform: translateY(13rem);

@@ -1,217 +1,231 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap");
-
-.time{
-    font-size:1.7rem;
-    position: absolute;
-    top: 10rem;
-    right: 25%;
-}
-
-.movieBackground{
-    width: 50%;
-    height: 5rem;
-    background-color: #000000;
-    opacity: 0.5;
-    position: absolute;
-    top: 13rem;
-    border-radius: 1rem;
-    /* center this div */
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.movie{
-    font-size: 2rem;
-    position: absolute;
-    top: 12rem;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    font-weight: bold;
-}
-
-.details{
-    width: 30%;
-    position: absolute;
-    top: 20rem;
-    left: 25%;
-    font-size: 1.5rem;
-}
-
-.scoreBackground{
-    width: 20%;
-    height: 8rem;
-    background-color: #000000;
-    opacity: 0.5;
-    position: absolute;
-    top: 20rem;
-    border-radius: 1rem;
-    /* center this div */
-    right: 35%;
-    transform: translateX(50%);
-}
-.score{
-    padding-bottom:1rem;
-}
-.scores{
-    padding: 0.5rem;
-    font-size: 1.5rem;
-    position: absolute;
-    right: 35%;
-    top: 21rem;
-    transform: translateX(50%);
-    color: white;
-}
-.grey{
-    height: 100vh;
-    width: 100vw;
-    color: #cbcbcb;
-
-}
 
 .logo {
   font-family: "Playfair Display", serif;
   mix-blend-mode: difference;
   text-shadow: 0 8px 32px #1f2933;
   color: #cbcbcb;
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+}
+
+.content {
+  display: grid;
+  height: 100vh;
+  margin: 2rem;
+  gap: 1rem;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 0.5fr 0.5fr 1fr;
+}
+
+
+.time {
+  display: flex;
+  grid-area: 1/4/2/6;
+  font-size: 1.5rem;
+  top: 10rem;
+  right: 25%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* dark background for dashed movie */
+.MovieDisplay {
+  grid-area: 1/2/2/5;
+  width: 100%;
+  display: flex;
+  margin-top: 20vh;
+  justify-content: center;
+  height: 5rem;
+  background-color: #000000;
+  opacity: 0.5;
+  border-radius: 1rem;
+}
+
+.movie {
+  display: flex;
+  color: white;
+  font-weight: bold;
+    margin-top: 15px;
+}
+
+p{
+    margin: 5px;
+}
+
+.details {
     margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 3rem;
-    left: 3rem;
-}
-
-.input{
-    position: absolute;
-    bottom: 11.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 1.5rem;
-    opacity: 0.8;
-    font-family: 'Montserrat', sans-serif;
-    border: 1px solid #ccc;
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-    background-color: #ffffff;
-    width: 30%;
-}
-
-.timeup{
-    /* make a timeup card */
-    position: fixed;
-    top:7rem;
-    left: 50vh;
-    font-family: 'Montserrat', sans-serif;
-    width: 50%;
-    height: 30rem;
-    padding: 4rem;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    size: 5rem;
-    font-size: 1.5rem;
-    background-color: black;
-    color: #ffffff;
-    text-align: center;
     display: flex;
-    justify-content: center;
-    padding-top: 7rem;
+    flex-direction: column  ;
+    gap:-1rem;
+    grid-area: 2/2/3/4;
+  width: 100%;
+  font-size: 1.5rem;
 }
 
-.buttons{
-    display: grid;
-    grid-template-columns: 1fr ;
+.scoreDetails {
+  grid-area: 2/4/3/6;
+}
+
+.scoreBackground {
+  width: 80%;
+  height: 8rem;
+  background-color: #000000;
+  opacity: 0.5;
+  top: 20rem;
+  border-radius: 1rem;
+}
+.scores {
+    position: relative;
+    top: -7rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  color: white;
+}
+.grey {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  color: #cbcbcb;
+}
+
+.input {
+  font-size: 1.5rem;
+  opacity: 0.8;
+  font-family: "Montserrat", sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background-color: #ffffff;
+}
+
+.timeup {
+  /* make a timeup card */
+  position: fixed;
+  top: 7rem;
+  left: 50vh;
+  font-family: "Montserrat", sans-serif;
+  width: 50%;
+  height: 30rem;
+  padding: 4rem;
+  display: grid;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  size: 5rem;
+  font-size: 1.5rem;
+  background-color: black;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 7rem;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr;
+  position: absolute;
+  bottom: 3rem;
+}
+
+.score-input {
+    position: relative;
+    top:-4rem;
+  display: flex;
+  grid-area: 3/2/4/5;
+  justify-content: center;
+  height: 3rem;
+  width: 100%;
+}
+
+
+@media screen and (max-width: 768px) {
+  .score-input {
     position: absolute;
-    bottom: 3rem;
-}
-
-.score-input{
-    display: block;
-}
-
-@media screen and (max-width: 1000px){
-
-    .score-input{
-        position: absolute;
     bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
     width: 20rem;
     height: 40rem;
     z-index: -1;
-    }
+  }
 
-    .logo{
-        font-size: 1.6rem;
-    }
+  .logo {
+    font-size: 1.6rem;
+  }
 
-    .movieBackground{
-        width: 80%;
-        height: 5rem;
-        background-color: #000000;
-        opacity: 0.5;
-        position: absolute;
-        top: 13rem;
-        border-radius: 1rem;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+  .movieBackground {
+    width: 80%;
+    height: 5rem;
+    background-color: #000000;
+    opacity: 0.5;
+    position: absolute;
+    top: 13rem;
+    border-radius: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
-    .details{
-        width: 80%;
-        position: absolute;
-        top: 20rem;
-        left: 10%;
-        font-size: 1rem;
-    }
+  .details {
+    width: 80%;
+    position: absolute;
+    top: 20rem;
+    left: 10%;
+    font-size: 1rem;
+  }
 
-    .scoreBackground{
-        width: 80%;
-        height: 8rem;
-        background-color: #000000;
-        opacity: 0.5;
-        position: absolute;
-        top: 32rem;
-        border-radius: 1rem;
-        /* center this div */
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    .scores{
-        width: 100%;
-        padding: 0.5rem;
-        font-size: 1rem;
-        position: absolute;
-        top: 33rem;
-        transform: translateX(65%);
-        color: white;
-    }
-    .time{
-        font-size:1.2rem;
-        position: absolute;
-        top: 10rem;
-        right: 25%;
-    }
-    .input{
-        position: absolute;
-        bottom: 30%;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 1.3rem;
-        opacity: 0.8;
-        font-family: 'Montserrat', sans-serif;
-        border: 1px solid #ccc;
-        border-radius: 0.5rem;
-        padding: 0.5rem;
-        background-color: #ffffff;
-        width: 80%;
-    }
-    .buttons{
-        display: grid;
-        grid-template-columns: 1fr ;
-        position: absolute;
-        bottom: 3rem;
-    }
+  .scoreBackground {
+    width: 80%;
+    height: 8rem;
+    background-color: #000000;
+    opacity: 0.5;
+    position: absolute;
+    top: 32rem;
+    border-radius: 1rem;
+    /* center this div */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .scores {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    position: absolute;
+    top: 33rem;
+    transform: translateX(65%);
+    color: white;
+  }
+  .time {
+    font-size: 1.2rem;
+    position: absolute;
+    top: 10rem;
+    right: 25%;
+  }
+  .input {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.3rem;
+    opacity: 0.8;
+    font-family: "Montserrat", sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background-color: #ffffff;
+    width: 80%;
+  }
+  .buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: absolute;
+    bottom: 3rem;
+  }
 }

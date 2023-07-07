@@ -5,13 +5,20 @@ import Fade from "react-reveal/Fade";
 import Bounce from "react-reveal/Bounce";
 import "./HomePage.css";
 
-const ZoomExample = () => {
+const Home = () => {
+  //state to show instructions or not
   const [ShowInst, setShowInst] = useState(false);
+
+  //state to show game or not
   const [ShowGame, setShowGame] = useState(false);
+
+  //function to handle instructions
   const handleInstructions = (e) => {
     e.preventDefault();
     setShowInst(!ShowInst);
   };
+
+  //function to handle game
   const handleGame = (e) => {
     e.preventDefault();
     setShowGame(!ShowGame);
@@ -98,4 +105,4 @@ const ZoomExample = () => {
   );
 };
 
-export default ZoomExample;
+export default Home;

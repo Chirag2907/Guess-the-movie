@@ -1,11 +1,11 @@
 import './App.css';
-import ZoomExample from './Components/HomePage';
+import Home from './Components/HomePage';
 
 function App() {
   return (
     <div>
       <header className="App-header">
-        <ZoomExample />
+        <Home />
       </header>
     </div>
   );

@@ -15,7 +15,7 @@ const Timer = (props) => {
             console.log("first")
         }
         return () => clearInterval(interval);
-    }, [Time, props]);
+    }, [Time, props] );
 
   return (
     <div>

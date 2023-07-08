@@ -98,6 +98,7 @@ const GetMovie = (props) => {
       }
       //char is the variable that contains the character that is pressed
       let char = e.target.value;
+      char = char.toLowerCase();
       let win = document.getElementsByClassName("win");
       let flag = 0;
       for (let i = 0; i < movieLower.length; i++) {

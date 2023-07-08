@@ -115,7 +115,6 @@ const GetMovie = (props) => {
       } else {
         correctSet.add(char[0]);
       }
-
       if (attempts === 0) {
         const add = document.getElementsByClassName("movie");
         win[0].innerHTML = "You lost!";
@@ -125,14 +124,12 @@ const GetMovie = (props) => {
         setTimeout(() => {
           mySet1.clear();
           SetScore(0);
-
           correctSet.clear();
           attempts = 5;
           getData();
           return;
         }, 3000);
       } else {
-        win[0].innerHTML = "Remaining attempts: " + attempts;
         let at = document.getElementsByClassName("attempts");
         let arr = [];
         let corr = [];
@@ -142,19 +139,21 @@ const GetMovie = (props) => {
         mySet1.forEach((Element) => {
           arr.push(Element);
         });
+        win[0].innerHTML = "Remaining attempts: " + attempts;
         at[0].innerHTML =
           "Incorrect Guesses: " + arr + "<br/> Correct Guesses: " + corr;
         e.target.value = "";
-        const add = document.getElementsByClassName("movie");
+        let add = document.getElementsByClassName("movie");
         add[0].innerHTML = movieWithDash;
         if (movieWithDash === movieLower) {
           win[0].innerHTML = "You Win!";
-          SetScore(Score + 1);
-          if (Score + 1 > HighScore) {
-            SetHighScore(Score + 1);
-          }
+          movieWithDash = movieLower;
           e.target.value = "";
           setTimeout(() => {
+            SetScore(Score + 1);
+            if (Score +1  > HighScore) {
+              SetHighScore(Score+1);
+            }
             mySet1.clear();
             correctSet.clear();
             attempts = 5;

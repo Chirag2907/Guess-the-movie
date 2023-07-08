@@ -12,7 +12,6 @@ const Timer = (props) => {
         if (Time === 0) {
             clearInterval(interval);
             props.func(0);
-            console.log("first")
         }
         return () => clearInterval(interval);
     }, [Time, props] );

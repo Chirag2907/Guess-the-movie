@@ -57,8 +57,8 @@ const GetMovie = (props) => {
     correctSet.forEach((Element) => {
       corr.push(Element);
     });
-    at[0].innerHTML = "Incorrect Guesses: " + arr + "<br/> Correct Guesses: " +  corr;
- 
+    at[0].innerHTML =
+      "Incorrect Guesses: " + arr + "<br/> Correct Guesses: " + corr;
   };
 
   let attempts = 5;
@@ -67,7 +67,6 @@ const GetMovie = (props) => {
 
   //checker function is called when a key is pressed
   const checker = (e) => {
-
     if (e.target.value === "") {
       e.target.value = "";
       return;
@@ -89,11 +88,11 @@ const GetMovie = (props) => {
       return;
     }
     if (e.key === "Enter") {
-      if(mySet1.has(e.target.value)){
+      if (mySet1.has(e.target.value)) {
         e.target.value = "";
         return;
       }
-      if(correctSet.has(e.target.value)){
+      if (correctSet.has(e.target.value)) {
         e.target.value = "";
         return;
       }
@@ -113,8 +112,7 @@ const GetMovie = (props) => {
       if (flag === 0) {
         mySet1.add(char[0]);
         attempts--;
-      }
-      else{
+      } else {
         correctSet.add(char[0]);
       }
 
@@ -127,6 +125,7 @@ const GetMovie = (props) => {
         setTimeout(() => {
           mySet1.clear();
           SetScore(0);
+
           correctSet.clear();
           attempts = 5;
           getData();
@@ -143,13 +142,17 @@ const GetMovie = (props) => {
         mySet1.forEach((Element) => {
           arr.push(Element);
         });
-        at[0].innerHTML = "Incorrect Guesses: " + arr + "<br/> Correct Guesses: " +  corr;
+        at[0].innerHTML =
+          "Incorrect Guesses: " + arr + "<br/> Correct Guesses: " + corr;
         e.target.value = "";
         const add = document.getElementsByClassName("movie");
         add[0].innerHTML = movieWithDash;
         if (movieWithDash === movieLower) {
           win[0].innerHTML = "You Win!";
           SetScore(Score + 1);
+          if (Score + 1 > HighScore) {
+            SetHighScore(Score + 1);
+          }
           e.target.value = "";
           setTimeout(() => {
             mySet1.clear();
@@ -164,6 +167,7 @@ const GetMovie = (props) => {
   };
 
   const [Score, SetScore] = useState(0);
+  const [HighScore, SetHighScore] = useState(0);
 
   React.useEffect(() => {
     setTimeout(() => getData(), 0);
@@ -181,17 +185,21 @@ const GetMovie = (props) => {
   return (
     <div className="grey">
       {Show ? (
-        <div className="timeup">
-          Time Up!
-          <br /> <br />
-          Well Played!
-          <br /> <br />
-          Final Score: {Score}
-          <br />
-          <div className="buttons">
-            <span>
-              <button onClick={props.func}>Exit to main menu</button>
-            </span>
+        <div className="timeupcard">
+          <div className="timeup">
+            Time Up!
+            <br /> <br />
+            Well Played!
+            <br /> <br />
+            Final Score: {Score}
+            <br /> <br />
+            High Score: {HighScore}
+            <br />
+            <div className="buttons">
+              <span>
+                <button onClick={props.func}>Exit to main menu</button>
+              </span>
+            </div>
           </div>
         </div>
       ) : null}
@@ -217,17 +225,16 @@ const GetMovie = (props) => {
             type="text"
             onKeyDown={checker}
           />
-
-        </div >
+        </div>
         <div className="time">
-          <Timer  func={pull_time} />
+          <Timer func={pull_time} />
         </div>
 
         <div className="scoreDetails">
           <div className="scoreBackground"></div>
           <div className="scores">
             <div className="score">Current Score: {Score}</div>
-            <div>High Score: {}</div>
+            <div>High Score: {HighScore}</div>
           </div>
         </div>
       </div>

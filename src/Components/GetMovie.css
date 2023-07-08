@@ -20,11 +20,10 @@
   grid-template-rows: 0.5fr 0.5fr 1fr;
 }
 
-
 .time {
   display: flex;
   grid-area: 1/4/2/6;
-  font-size: 1.5rem;
+  font-size: 90%;
   top: 10rem;
   right: 25%;
   justify-content: center;
@@ -48,19 +47,19 @@
   display: flex;
   color: white;
   font-weight: bold;
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
-p{
-    margin: 5px;
+p {
+  margin: 5px;
 }
 
 .details {
-    margin: 0;
-    display: flex;
-    flex-direction: column  ;
-    gap:-1rem;
-    grid-area: 2/2/3/4;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: -1rem;
+  grid-area: 2/2/3/4;
   width: 100%;
   font-size: 1.5rem;
 }
@@ -78,11 +77,11 @@ p{
   border-radius: 1rem;
 }
 .scores {
-    position: relative;
-    top: -7rem;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  position: relative;
+  top: -7rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 
   padding: 0.5rem;
   font-size: 1.5rem;
@@ -105,39 +104,29 @@ p{
   background-color: #ffffff;
 }
 
-.timeup {
-  /* make a timeup card */
-  position: fixed;
-  top: 7rem;
-  left: 50vh;
-  font-family: "Montserrat", sans-serif;
-  width: 50%;
-  height: 30rem;
-  padding: 4rem;
-  display: grid;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  size: 5rem;
-  font-size: 1.5rem;
-  background-color: black;
-  color: #ffffff;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  padding-top: 7rem;
+.timeupcard {
+    margin:1rem;
+    height: 90vh;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeup{
+    background-color: rgba(32, 30, 30, 0.452);
+    color: #ffffff;
+    padding: 3rem;
+    border-radius: 1rem;
 }
 
 .buttons {
-  display: grid;
-  grid-template-columns: 1fr;
-  position: absolute;
-  bottom: 3rem;
+    margin-top: 2rem;
 }
 
 .score-input {
-    position: relative;
-    top:-4rem;
+  position: relative;
+  top: -4rem;
   display: flex;
   grid-area: 3/2/4/5;
   justify-content: center;
@@ -145,87 +134,72 @@ p{
   width: 100%;
 }
 
-
 @media screen and (max-width: 768px) {
   .score-input {
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 20rem;
-    height: 40rem;
-    z-index: -1;
+    width: 100%;
+    grid-area: 3/1/4/6;
+    top: 0;
+  }
+
+  .movie {
+    font-size: 1.5rem;
   }
 
   .logo {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
-  .movieBackground {
-    width: 80%;
-    height: 5rem;
-    background-color: #000000;
-    opacity: 0.5;
-    position: absolute;
-    top: 13rem;
-    border-radius: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
+  .MovieDisplay {
+    grid-area: 1/1/2/6;
+    height: 4rem;
+  }
+  .scores {
+    font-size: 1rem;
+  }
+  .details {
+  }
+  .scoreDetails {
+    grid-area: 2/4/3/6;
+    font-size: 1rem;
   }
 
   .details {
-    width: 80%;
-    position: absolute;
-    top: 20rem;
-    left: 10%;
-    font-size: 1rem;
-  }
-
-  .scoreBackground {
-    width: 80%;
-    height: 8rem;
-    background-color: #000000;
-    opacity: 0.5;
-    position: absolute;
-    top: 32rem;
-    border-radius: 1rem;
-    /* center this div */
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .scores {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    grid-area: 2/1/3/4;
     width: 100%;
-    padding: 0.5rem;
     font-size: 1rem;
-    position: absolute;
-    top: 33rem;
-    transform: translateX(65%);
-    color: white;
   }
-  .time {
-    font-size: 1.2rem;
-    position: absolute;
-    top: 10rem;
-    right: 25%;
-  }
-  .input {
-    position: absolute;
-    bottom: 30%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 1.3rem;
-    opacity: 0.8;
-    font-family: "Montserrat", sans-serif;
-    border: 1px solid #ccc;
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-    background-color: #ffffff;
-    width: 80%;
-  }
-  .buttons {
-    display: grid;
-    grid-template-columns: 1fr;
-    position: absolute;
-    bottom: 3rem;
-  }
+}
+
+@media screen and (max-width: 500px) {
+    .scoreDetails{
+        position: relative;
+        top: 5rem;
+        grid-area: 2/2/3/5;
+        width: 100%;
+    }
+
+    .scoreBackground{
+        width: 100%;
+        height: 60%;
+    }
+    .scores{
+        position: relative;
+        top: -4rem;
+    }
+    .details{
+
+        grid-area: 2/1/3/6;
+        width: 100%;
+    }
+    .score-input{
+        top: 1.5rem;
+        width: 100%;
+    }
+    .input{
+        width: 80%;
+        z-index: 1;
+    }
 }
